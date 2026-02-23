@@ -1,0 +1,119 @@
+/* ============================================
+   BASE - Variables, Reset y Estilos Globales
+   Estilo Campus Virtual — Unimagdalena
+   Programación Web 2026-1
+   by: Andres Luna
+   ============================================ */
+
+/* Fuente institucional */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+/* ---------- VARIABLES ---------- */
+:root {
+  /* Paleta institucional Unimagdalena (Moodle) */
+  --azul-oscuro: #003366;
+  --azul-medio: #006fbf;
+  --azul-claro: #006fbf;
+  --azul-nav: #043c6c;
+  --azul-hover: #004f82;
+  --naranja: #f0ad4e;
+  --naranja-hover: #e88a15;
+  --blanco: #ffffff;
+  --gris-fondo: #f8f9fa;
+  --gris-claro: #e9ecef;
+  --gris-borde: #dee2e6;
+  --gris-texto: #6a737b;
+  --gris-sutil: #6a737b;
+  --texto-oscuro: #1d2125;
+  --gap: 1.25rem;
+  --radius: 8px;
+  --sombra-tarjeta: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --sombra-tarjeta-hover: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- RESET Y BASE ---------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--gris-fondo);
+  color: var(--texto-oscuro);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 992px) {
+  .seccion-estudiantes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pie-contenido {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .encabezado-texto h1 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .seccion-estudiantes {
+    grid-template-columns: 1fr;
+  }
+
+  .pie-contenido {
+    grid-template-columns: 1fr;
+  }
+
+  .contenido-principal {
+    padding: 16px 12px 40px;
+  }
+
+  .encabezado-principal {
+    padding: 0 12px;
+  }
+
+  .encabezado-contenido {
+    flex-wrap: wrap;
+    min-height: auto;
+    padding: 10px 0;
+  }
+
+  .encabezado-texto h1 {
+    font-size: 0.88rem;
+    margin-left: 0;
+  }
+
+  .navegacion-principal {
+    padding: 0 12px;
+    overflow-x: auto;
+  }
+
+  .menu-enlaces {
+    flex-wrap: nowrap;
+  }
+
+  .menu-enlaces li a {
+    padding: 10px 12px;
+    font-size: 0.78rem;
+  }
+
+  .logo-universidad {
+    height: 34px;
+  }
+}

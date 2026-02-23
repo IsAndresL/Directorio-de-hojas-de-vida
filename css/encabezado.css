@@ -1,0 +1,139 @@
+/* ============================================
+   ENCABEZADO - Header y Navegación
+   ============================================ */
+
+/* ---------- ENCABEZADO SUPERIOR (Barra blanca Moodle) ---------- */
+.encabezado-principal {
+  background-color: var(--blanco);
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--gris-borde);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.encabezado-contenido {
+  max-width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 50px;
+}
+
+/* Logo de la universidad */
+.logo-universidad {
+  height: 38px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.encabezado-marca {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.encabezado-marca-titulo {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--blanco);
+  letter-spacing: 0.3px;
+}
+
+.encabezado-marca-sub {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Título del curso en el header */
+.encabezado-texto {
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+  padding-left: 16px;
+  border-left: 1px solid var(--gris-borde);
+}
+
+.encabezado-texto h1 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--texto-oscuro);
+  letter-spacing: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 450px;
+}
+
+.subtitulo {
+  display: none;
+}
+
+/* Iconos a la derecha del header */
+.encabezado-iconos {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: auto;
+}
+
+.encabezado-iconos a {
+  color: var(--gris-sutil);
+  font-size: 1rem;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.encabezado-iconos a:hover {
+  color: var(--azul-medio);
+}
+
+/* ---------- NAVEGACIÓN (Barra azul oscura) ---------- */
+.navegacion-principal {
+  background-color: #043c6c;
+  padding: 10px 20px;
+  box-shadow: none;
+}
+
+.menu-enlaces {
+  max-width: 1200px;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  gap: 0;
+}
+
+.menu-enlaces li a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 14px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.menu-enlaces li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--blanco);
+}
+
+.menu-enlaces li a.enlace-activo {
+  color: var(--blanco);
+  font-weight: 600;
+  border-bottom-color: var(--blanco);
+  background-color: transparent;
+}
+
+.menu-enlaces li a i {
+  font-size: 0.8rem;
+}
