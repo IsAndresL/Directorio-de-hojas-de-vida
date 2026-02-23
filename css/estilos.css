@@ -1,0 +1,445 @@
+/* ============================================
+   ESTILOS - Directorio de Hojas de Vida
+   Programación Web 2026-1
+   Universidad del Magdalena
+   ============================================ */
+
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+/* ---------- VARIABLES (misma paleta del CV) ---------- */
+:root {
+    --bg-color: #0a0a0a;
+    --tile-bg: #171717;
+    --text-primary: #ededed;
+    --text-secondary: #a1a1a1;
+    --accent: #6366f1;
+    --accent-hover: #818cf8;
+    --border: #333;
+    --gap: 1.5rem;
+    --radius: 24px;
+}
+
+/* ---------- RESET Y BASE ---------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- ENCABEZADO (HEADER) ---------- */
+.encabezado-principal {
+    background-color: var(--tile-bg);
+    padding: 28px 40px;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.encabezado-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.encabezado-texto h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #fff, var(--text-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+}
+
+.subtitulo {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+/* ---------- NAVEGACIÓN (NAV) ---------- */
+.navegacion-principal {
+    background-color: var(--tile-bg);
+    padding: 0 40px;
+    border-bottom: 1px solid var(--border);
+}
+
+.menu-enlaces {
+    max-width: 1200px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    gap: 0;
+}
+
+.menu-enlaces li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 22px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: color 0.25s ease, background-color 0.25s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.menu-enlaces li a:hover,
+.menu-enlaces li a.enlace-activo {
+    color: var(--text-primary);
+    background-color: rgba(255, 255, 255, 0.03);
+    border-bottom-color: var(--accent);
+}
+
+.menu-enlaces li a i {
+    font-size: 0.85rem;
+}
+
+/* ---------- CONTENIDO PRINCIPAL ---------- */
+.contenido-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 40px 50px;
+    width: 100%;
+}
+
+/* ---------- SECCIÓN BÚSQUEDA ---------- */
+.seccion-busqueda {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.barra-busqueda {
+    display: flex;
+    align-items: center;
+    background-color: var(--tile-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.barra-busqueda:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.input-busqueda {
+    border: none;
+    outline: none;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-primary);
+    width: 220px;
+    background: transparent;
+}
+
+.input-busqueda::placeholder {
+    color: var(--text-secondary);
+}
+
+.boton-busqueda {
+    border: none;
+    background: transparent;
+    padding: 10px 14px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.boton-busqueda:hover {
+    color: var(--accent);
+}
+
+.enlace-opciones {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s ease;
+}
+
+.enlace-opciones:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+/* ---------- GRID DE TARJETAS ---------- */
+.seccion-estudiantes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+}
+
+/* ---------- TARJETA DE ESTUDIANTE ---------- */
+.tarjeta-estudiante {
+    background-color: var(--tile-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 20px 22px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjeta-estudiante:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+/* --- Foto del Estudiante --- */
+.foto-contenedor {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 16px;
+}
+
+.foto-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    background: linear-gradient(135deg, #1e1e3a, #2a2a4a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.foto-placeholder::after {
+    content: attr(data-iniciales);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent-hover);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Cuando se coloque una <img> dentro de foto-contenedor */
+.foto-contenedor img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    object-fit: cover;
+}
+
+/* --- Nombre --- */
+.nombre-estudiante {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+/* --- Cargo --- */
+.cargo-estudiante {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+    font-weight: 400;
+}
+
+/* --- Botón Ver --- */
+.boton-ver {
+    display: inline-block;
+    padding: 8px 28px;
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--accent);
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    transition: all 0.25s ease;
+    margin-bottom: 14px;
+}
+
+.boton-ver:hover {
+    background: var(--accent);
+    color: #ffffff;
+    transform: scale(1.04);
+    box-shadow: 0 4px 18px rgba(99, 102, 241, 0.3);
+}
+
+/* --- Redes Sociales --- */
+.redes-estudiante {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.icono-red {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.85rem;
+    border: 1px solid transparent;
+    transition: all 0.25s ease;
+}
+
+.icono-red:hover {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+/* --- Tarjeta sin enlace (más compacta) --- */
+.tarjeta-sin-enlace {
+    padding-bottom: 20px;
+}
+
+.tarjeta-sin-enlace .cargo-estudiante {
+    margin-bottom: 0;
+}
+
+/* ---------- PIE DE PÁGINA (FOOTER) ---------- */
+.pie-pagina {
+    background-color: var(--tile-bg);
+    color: var(--text-secondary);
+    margin-top: auto;
+    border-top: 1px solid var(--border);
+}
+
+.pie-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 40px 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.pie-seccion h4 {
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.pie-seccion h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35px;
+    height: 2px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+.pie-seccion p {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.pie-seccion p i {
+    margin-right: 6px;
+    color: var(--accent);
+    width: 16px;
+    text-align: center;
+}
+
+.pie-inferior {
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 18px 40px;
+}
+
+.pie-inferior p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 992px) {
+    .seccion-estudiantes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pie-contenido {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .encabezado-texto h1 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .seccion-estudiantes {
+        grid-template-columns: 1fr;
+    }
+
+    .pie-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .contenido-principal {
+        padding: 20px 16px 40px;
+    }
+
+    .encabezado-principal {
+        padding: 18px 16px;
+    }
+
+    .navegacion-principal {
+        padding: 0 16px;
+    }
+
+    .menu-enlaces {
+        flex-wrap: wrap;
+    }
+
+    .menu-enlaces li a {
+        padding: 10px 14px;
+        font-size: 0.82rem;
+    }
+
+    .encabezado-texto h1 {
+        font-size: 1.2rem;
+    }
+}

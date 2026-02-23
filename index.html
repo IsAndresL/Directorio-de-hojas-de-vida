@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hojas de Vida - Programación Web 2026-1</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- ==================== ENCABEZADO ==================== -->
+    <header class="encabezado-principal">
+        <div class="encabezado-contenido">
+            <div class="encabezado-texto">
+                <h1>Hojas de Vida de Estudiantes</h1>
+                <p class="subtitulo">Programación Web — Universidad del Magdalena — 2026-1</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== NAVEGACIÓN ==================== -->
+    <nav class="navegacion-principal">
+        <ul class="menu-enlaces">
+            <li><a href="#" class="enlace-activo"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="#estudiantes"><i class="fas fa-users"></i> Estudiantes</a></li>
+            <li><a href="#pie-pagina"><i class="fas fa-envelope"></i> Acerca de</a></li>
+        </ul>
+    </nav>
+
+    <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
+    <main class="contenido-principal">
+
+        <!-- Sección de Búsqueda -->
+        <section id="busqueda" class="seccion-busqueda">
+            <div class="barra-busqueda">
+                <input type="text" id="campoBusqueda" placeholder="Buscar..." class="input-busqueda">
+                <button class="boton-busqueda" aria-label="Buscar">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <a href="#" class="enlace-opciones">
+                <i class="fas fa-sliders-h"></i> Mostrar opciones de búsqueda
+            </a>
+        </section>
+
+        <!-- Sección de Tarjetas de Estudiantes -->
+        <section id="estudiantes" class="seccion-estudiantes">
+
+            <!-- ===== ESTUDIANTES CON ENLACE ===== -->
+
+            <!-- 1. Andres Luna -->
+            <article class="tarjeta-estudiante">
+                <div class="foto-contenedor">
+                    <!-- Reemplazar con: <img src="img/andres-luna.jpg" alt="Andres Luna"> -->
+                    <div class="foto-placeholder" data-iniciales="AL"></div>
+                </div>
+                <h3 class="nombre-estudiante">Andres Luna</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+                <a href="#" class="boton-ver" target="_blank">Ver</a>
+                <div class="redes-estudiante">
+                    <a href="#" class="icono-red" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="icono-red" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </article>
+
+            <!-- 2. Lara Andres -->
+            <article class="tarjeta-estudiante">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="LA"></div>
+                </div>
+                <h3 class="nombre-estudiante">Lara Andres</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+                <a href="https://andresitdev.github.io/PW2026-Curriculum/" class="boton-ver" target="_blank">Ver</a>
+                <div class="redes-estudiante">
+                    <a href="#" class="icono-red" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="icono-red" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </article>
+
+            <!-- 3. Juan Simancas -->
+            <article class="tarjeta-estudiante">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="JS"></div>
+                </div>
+                <h3 class="nombre-estudiante">Juan Simancas</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+                <a href="https://ginozza.shrew.ink/" class="boton-ver" target="_blank">Ver</a>
+                <div class="redes-estudiante">
+                    <a href="#" class="icono-red" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="icono-red" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </article>
+
+            <!-- 4. Ana K Rivera -->
+            <article class="tarjeta-estudiante">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="AR"></div>
+                </div>
+                <h3 class="nombre-estudiante">Ana K Rivera</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+                <a href="https://anakarina15.github.io/" class="boton-ver" target="_blank">Ver</a>
+                <div class="redes-estudiante">
+                    <a href="#" class="icono-red" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="icono-red" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </article>
+
+            <!-- 5. Andrés Rivera -->
+            <article class="tarjeta-estudiante">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="AR"></div>
+                </div>
+                <h3 class="nombre-estudiante">Andrés Rivera</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+                <a href="https://ariverne.github.io/CV" class="boton-ver" target="_blank">Ver</a>
+                <div class="redes-estudiante">
+                    <a href="#" class="icono-red" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="icono-red" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </article>
+
+            <!-- 6. David Izquierdo -->
+            <article class="tarjeta-estudiante">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="DI"></div>
+                </div>
+                <h3 class="nombre-estudiante">David Izquierdo</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+                <a href="https://davidraf2.github.io/" class="boton-ver" target="_blank">Ver</a>
+                <div class="redes-estudiante">
+                    <a href="#" class="icono-red" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="icono-red" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </article>
+
+            <!-- ===== ESTUDIANTES SIN ENLACE ===== -->
+
+            <!-- 7. Daniel Orozco -->
+            <article class="tarjeta-estudiante tarjeta-sin-enlace">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="DO"></div>
+                </div>
+                <h3 class="nombre-estudiante">Daniel Orozco</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+                <div class="redes-estudiante">
+                    <a href="#" class="icono-red" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="icono-red" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </article>
+
+            <!-- 8. Yuranis Botto -->
+            <article class="tarjeta-estudiante tarjeta-sin-enlace">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="YB"></div>
+                </div>
+                <h3 class="nombre-estudiante">Yuranis Botto</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+                <div class="redes-estudiante">
+                    <a href="#" class="icono-red" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="icono-red" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </article>
+
+            <!-- 9. Milder Blanco -->
+            <article class="tarjeta-estudiante tarjeta-sin-enlace">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="MB"></div>
+                </div>
+                <h3 class="nombre-estudiante">Milder Blanco</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+                <div class="redes-estudiante">
+                    <a href="#" class="icono-red" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="icono-red" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </article>
+
+            <!-- 10. Santiago Torres -->
+            <article class="tarjeta-estudiante tarjeta-sin-enlace">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="ST"></div>
+                </div>
+                <h3 class="nombre-estudiante">Santiago Torres</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+                <div class="redes-estudiante">
+                    <a href="#" class="icono-red" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="icono-red" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </article>
+
+            <!-- 11. Carvajal -->
+            <article class="tarjeta-estudiante tarjeta-sin-enlace">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="C"></div>
+                </div>
+                <h3 class="nombre-estudiante">Carvajal</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+                <div class="redes-estudiante">
+                    <a href="#" class="icono-red" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="icono-red" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </article>
+
+            <!-- 12. Leonardo Ramirez -->
+            <article class="tarjeta-estudiante tarjeta-sin-enlace">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="LR"></div>
+                </div>
+                <h3 class="nombre-estudiante">Leonardo Ramirez</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+                <div class="redes-estudiante">
+                    <a href="#" class="icono-red" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="icono-red" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </article>
+
+            <!-- 13. Joan Marin -->
+            <article class="tarjeta-estudiante tarjeta-sin-enlace">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="JM"></div>
+                </div>
+                <h3 class="nombre-estudiante">Joan Marin</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+                <div class="redes-estudiante">
+                    <a href="#" class="icono-red" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="icono-red" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </article>
+
+            <!-- 14. Jossy Rojas -->
+            <article class="tarjeta-estudiante tarjeta-sin-enlace">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="JR"></div>
+                </div>
+                <h3 class="nombre-estudiante">Jossy Rojas</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+                <div class="redes-estudiante">
+                    <a href="#" class="icono-red" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="icono-red" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </article>
+
+            <!-- 15. Camilo Monsalve -->
+            <article class="tarjeta-estudiante tarjeta-sin-enlace">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="CM"></div>
+                </div>
+                <h3 class="nombre-estudiante">Camilo Monsalve</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+                <div class="redes-estudiante">
+                    <a href="#" class="icono-red" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="icono-red" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </article>
+
+            <!-- 16. Juan Tamara -->
+            <article class="tarjeta-estudiante tarjeta-sin-enlace">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="JT"></div>
+                </div>
+                <h3 class="nombre-estudiante">Juan Tamara</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+                <div class="redes-estudiante">
+                    <a href="#" class="icono-red" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="icono-red" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </article>
+
+            <!-- 17. Participante 1 -->
+            <article class="tarjeta-estudiante tarjeta-sin-enlace">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="P1"></div>
+                </div>
+                <h3 class="nombre-estudiante">Participante 1</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+            </article>
+
+            <!-- 18. Participante 2 -->
+            <article class="tarjeta-estudiante tarjeta-sin-enlace">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="P2"></div>
+                </div>
+                <h3 class="nombre-estudiante">Participante 2</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+            </article>
+
+            <!-- 19. Participante 3 -->
+            <article class="tarjeta-estudiante tarjeta-sin-enlace">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="P3"></div>
+                </div>
+                <h3 class="nombre-estudiante">Participante 3</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+            </article>
+
+            <!-- 20. Participante 4 -->
+            <article class="tarjeta-estudiante tarjeta-sin-enlace">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="P4"></div>
+                </div>
+                <h3 class="nombre-estudiante">Participante 4</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+            </article>
+
+            <!-- 21. Participante 5 -->
+            <article class="tarjeta-estudiante tarjeta-sin-enlace">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="P5"></div>
+                </div>
+                <h3 class="nombre-estudiante">Participante 5</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+            </article>
+
+            <!-- 22. Participante 6 -->
+            <article class="tarjeta-estudiante tarjeta-sin-enlace">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="P6"></div>
+                </div>
+                <h3 class="nombre-estudiante">Participante 6</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+            </article>
+
+            <!-- 23. Participante 7 -->
+            <article class="tarjeta-estudiante tarjeta-sin-enlace">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="P7"></div>
+                </div>
+                <h3 class="nombre-estudiante">Participante 7</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+            </article>
+
+            <!-- 24. Participante 8 -->
+            <article class="tarjeta-estudiante tarjeta-sin-enlace">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="P8"></div>
+                </div>
+                <h3 class="nombre-estudiante">Participante 8</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+            </article>
+
+            <!-- 25. Participante 9 -->
+            <article class="tarjeta-estudiante tarjeta-sin-enlace">
+                <div class="foto-contenedor">
+                    <div class="foto-placeholder" data-iniciales="P9"></div>
+                </div>
+                <h3 class="nombre-estudiante">Participante 9</h3>
+                <p class="cargo-estudiante">Estudiante de Programación Web</p>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- ==================== PIE DE PÁGINA ==================== -->
+    <footer id="pie-pagina" class="pie-pagina">
+        <div class="pie-contenido">
+            <div class="pie-seccion">
+                <h4>Universidad del Magdalena</h4>
+                <p>Programa de Ingeniería de Sistemas</p>
+                <p>Programación Web — Periodo 2026-1</p>
+            </div>
+            <div class="pie-seccion">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Santa Marta, Magdalena, Colombia</p>
+            </div>
+        </div>
+        <div class="pie-inferior">
+            <p>Desarrollado por <strong>Andres Luna</strong> &mdash; &copy; 2026</p>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPT DE BÚSQUEDA ==================== -->
+    <script>
+        // Buscador: filtra tarjetas de estudiantes por nombre
+        const campoBusqueda = document.getElementById('campoBusqueda');
+        const tarjetas = document.querySelectorAll('.tarjeta-estudiante');
+
+        campoBusqueda.addEventListener('input', function () {
+            const filtro = this.value.toLowerCase().trim();
+            tarjetas.forEach(function (tarjeta) {
+                const nombre = tarjeta.querySelector('.nombre-estudiante').textContent.toLowerCase();
+                if (nombre.includes(filtro)) {
+                    tarjeta.style.display = '';
+                } else {
+                    tarjeta.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
