@@ -1,445 +1,544 @@
 /* ============================================
    ESTILOS - Directorio de Hojas de Vida
+   Estilo Campus Virtual — Unimagdalena
    Programación Web 2026-1
-   Universidad del Magdalena
    ============================================ */
 
-/* Fuentes */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+/* Fuente institucional */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
 
-/* ---------- VARIABLES (misma paleta del CV) ---------- */
+/* ---------- VARIABLES ---------- */
 :root {
-    --bg-color: #0a0a0a;
-    --tile-bg: #171717;
-    --text-primary: #ededed;
-    --text-secondary: #a1a1a1;
-    --accent: #6366f1;
-    --accent-hover: #818cf8;
-    --border: #333;
-    --gap: 1.5rem;
-    --radius: 24px;
+  /* Paleta institucional Unimagdalena */
+  --azul-oscuro: #003366;
+  --azul-medio: #005a9c;
+  --azul-claro: #0073c6;
+  --azul-nav: #00639e;
+  --azul-hover: #004f82;
+  --naranja: #f8971d;
+  --naranja-hover: #e88a15;
+  --blanco: #ffffff;
+  --gris-fondo: #f1f3f5;
+  --gris-claro: #e9ecef;
+  --gris-borde: #dee2e6;
+  --gris-texto: #495057;
+  --gris-sutil: #868e96;
+  --texto-oscuro: #212529;
+  --gap: 1.25rem;
+  --radius: 8px;
+  --sombra-tarjeta: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --sombra-tarjeta-hover: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
 /* ---------- RESET Y BASE ---------- */
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Outfit', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-primary);
-    line-height: 1.5;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
+  background-color: var(--gris-fondo);
+  color: var(--texto-oscuro);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* ---------- ENCABEZADO (HEADER) ---------- */
+/* ---------- ENCABEZADO SUPERIOR (Barra azul oscura) ---------- */
 .encabezado-principal {
-    background-color: var(--tile-bg);
-    padding: 28px 40px;
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background-color: var(--azul-oscuro);
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .encabezado-contenido {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 18px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 60px;
 }
 
+/* Logo de la universidad */
+.logo-universidad {
+  height: 42px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.encabezado-marca {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.encabezado-marca-titulo {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--blanco);
+  letter-spacing: 0.3px;
+}
+
+.encabezado-marca-sub {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Título del curso en el header */
 .encabezado-texto h1 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    background: linear-gradient(90deg, #fff, var(--text-secondary));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: -0.5px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--blanco);
+  letter-spacing: 0.2px;
+  margin-left: auto;
 }
 
 .subtitulo {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    font-weight: 400;
-    margin-top: 2px;
+  display: none;
 }
 
-/* ---------- NAVEGACIÓN (NAV) ---------- */
+/* Iconos a la derecha del header */
+.encabezado-iconos {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+
+.encabezado-iconos a {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.05rem;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.encabezado-iconos a:hover {
+  color: var(--blanco);
+}
+
+/* ---------- NAVEGACIÓN (Barra azul media) ---------- */
 .navegacion-principal {
-    background-color: var(--tile-bg);
-    padding: 0 40px;
-    border-bottom: 1px solid var(--border);
+  background-color: var(--azul-nav);
+  padding: 0 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .menu-enlaces {
-    max-width: 1200px;
-    margin: 0 auto;
-    list-style: none;
-    display: flex;
-    gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  gap: 0;
 }
 
 .menu-enlaces li a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 14px 22px;
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 400;
-    transition: color 0.25s ease, background-color 0.25s ease;
-    border-bottom: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 18px;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 400;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
 }
 
-.menu-enlaces li a:hover,
+.menu-enlaces li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--blanco);
+}
+
 .menu-enlaces li a.enlace-activo {
-    color: var(--text-primary);
-    background-color: rgba(255, 255, 255, 0.03);
-    border-bottom-color: var(--accent);
+  color: var(--blanco);
+  font-weight: 600;
+  border-bottom-color: var(--naranja);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .menu-enlaces li a i {
-    font-size: 0.85rem;
+  font-size: 0.8rem;
+}
+
+/* ---------- TÍTULO DE PÁGINA ---------- */
+.titulo-pagina {
+  background-color: var(--blanco);
+  border-bottom: 1px solid var(--gris-borde);
+  padding: 22px 24px;
+}
+
+.titulo-pagina h2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--azul-oscuro);
 }
 
 /* ---------- CONTENIDO PRINCIPAL ---------- */
 .contenido-principal {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 30px 40px 50px;
-    width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 24px 50px;
+  width: 100%;
 }
 
 /* ---------- SECCIÓN BÚSQUEDA ---------- */
 .seccion-busqueda {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
 }
 
 .barra-busqueda {
-    display: flex;
-    align-items: center;
-    background-color: var(--tile-bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  align-items: center;
+  background-color: var(--blanco);
+  border: 1px solid var(--gris-borde);
+  border-radius: 6px;
+  overflow: hidden;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .barra-busqueda:focus-within {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  border-color: var(--azul-claro);
+  box-shadow: 0 0 0 3px rgba(0, 115, 198, 0.12);
 }
 
 .input-busqueda {
-    border: none;
-    outline: none;
-    padding: 10px 14px;
-    font-size: 0.9rem;
-    font-family: 'Outfit', sans-serif;
-    color: var(--text-primary);
-    width: 220px;
-    background: transparent;
+  border: none;
+  outline: none;
+  padding: 9px 14px;
+  font-size: 0.88rem;
+  font-family: "Open Sans", sans-serif;
+  color: var(--texto-oscuro);
+  width: 220px;
+  background: transparent;
 }
 
 .input-busqueda::placeholder {
-    color: var(--text-secondary);
+  color: var(--gris-sutil);
 }
 
 .boton-busqueda {
-    border: none;
-    background: transparent;
-    padding: 10px 14px;
-    cursor: pointer;
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    transition: color 0.2s ease;
+  border: none;
+  background: transparent;
+  padding: 9px 14px;
+  cursor: pointer;
+  color: var(--gris-sutil);
+  font-size: 0.92rem;
+  transition: color 0.2s ease;
 }
 
 .boton-busqueda:hover {
-    color: var(--accent);
+  color: var(--azul-claro);
 }
 
 .enlace-opciones {
-    color: var(--accent);
-    text-decoration: none;
-    font-size: 0.88rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    transition: color 0.2s ease;
+  color: var(--azul-claro);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
 }
 
 .enlace-opciones:hover {
-    color: var(--accent-hover);
-    text-decoration: underline;
+  color: var(--azul-medio);
+  text-decoration: underline;
 }
 
 /* ---------- GRID DE TARJETAS ---------- */
 .seccion-estudiantes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--gap);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
 }
 
 /* ---------- TARJETA DE ESTUDIANTE ---------- */
 .tarjeta-estudiante {
-    background-color: var(--tile-bg);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 28px 20px 22px;
-    text-align: center;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: var(--blanco);
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radius);
+  padding: 28px 20px 22px;
+  text-align: center;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--sombra-tarjeta);
 }
 
 .tarjeta-estudiante:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-tarjeta-hover);
+  border-color: var(--azul-claro);
 }
 
 /* --- Foto del Estudiante --- */
 .foto-contenedor {
-    width: 110px;
-    height: 110px;
-    margin-bottom: 16px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 14px;
 }
 
 .foto-placeholder {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 3px solid var(--accent);
-    background: linear-gradient(135deg, #1e1e3a, #2a2a4a);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid var(--azul-claro);
+  background: linear-gradient(135deg, #e8f0fe, #d4e4f7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .foto-placeholder::after {
-    content: attr(data-iniciales);
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--accent-hover);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  content: attr(data-iniciales);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--azul-medio);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Cuando se coloque una <img> dentro de foto-contenedor */
 .foto-contenedor img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 3px solid var(--accent);
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid var(--azul-claro);
+  object-fit: cover;
 }
 
 /* --- Nombre --- */
 .nombre-estudiante {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--texto-oscuro);
+  margin-bottom: 2px;
 }
 
 /* --- Cargo --- */
 .cargo-estudiante {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    margin-bottom: 14px;
-    font-weight: 400;
+  font-size: 0.78rem;
+  color: var(--gris-sutil);
+  margin-bottom: 14px;
+  font-weight: 400;
 }
 
 /* --- Botón Ver --- */
 .boton-ver {
-    display: inline-block;
-    padding: 8px 28px;
-    background: rgba(99, 102, 241, 0.1);
-    color: var(--accent);
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-    border: 1px solid rgba(99, 102, 241, 0.2);
-    transition: all 0.25s ease;
-    margin-bottom: 14px;
+  display: inline-block;
+  padding: 7px 26px;
+  background-color: var(--azul-claro);
+  color: var(--blanco);
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  border: none;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+  margin-bottom: 14px;
+  cursor: pointer;
 }
 
 .boton-ver:hover {
-    background: var(--accent);
-    color: #ffffff;
-    transform: scale(1.04);
-    box-shadow: 0 4px 18px rgba(99, 102, 241, 0.3);
+  background-color: var(--azul-hover);
+  transform: scale(1.03);
+  box-shadow: 0 3px 10px rgba(0, 83, 156, 0.25);
 }
 
 /* --- Redes Sociales --- */
 .redes-estudiante {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
 }
 
 .icono-red {
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--text-secondary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 0.85rem;
-    border: 1px solid transparent;
-    transition: all 0.25s ease;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--azul-claro);
+  color: var(--blanco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
 }
 
 .icono-red:hover {
-    background: var(--accent);
-    color: #ffffff;
+  background-color: var(--azul-oscuro);
+  transform: scale(1.1);
 }
 
 /* --- Tarjeta sin enlace (más compacta) --- */
 .tarjeta-sin-enlace {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .tarjeta-sin-enlace .cargo-estudiante {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* ---------- PIE DE PÁGINA (FOOTER) ---------- */
 .pie-pagina {
-    background-color: var(--tile-bg);
-    color: var(--text-secondary);
-    margin-top: auto;
-    border-top: 1px solid var(--border);
+  background-color: var(--azul-oscuro);
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: auto;
 }
 
 .pie-contenido {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 40px 30px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 }
 
 .pie-seccion h4 {
-    color: var(--text-primary);
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 12px;
-    position: relative;
-    padding-bottom: 8px;
+  color: var(--blanco);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  position: relative;
+  padding-bottom: 8px;
 }
 
 .pie-seccion h4::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 35px;
-    height: 2px;
-    background-color: var(--accent);
-    border-radius: 2px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35px;
+  height: 2px;
+  background-color: var(--naranja);
+  border-radius: 2px;
 }
 
 .pie-seccion p {
-    font-size: 0.85rem;
-    margin-bottom: 6px;
-    line-height: 1.7;
-    color: var(--text-secondary);
+  font-size: 0.82rem;
+  margin-bottom: 5px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .pie-seccion p i {
-    margin-right: 6px;
-    color: var(--accent);
-    width: 16px;
-    text-align: center;
+  margin-right: 6px;
+  color: var(--naranja);
+  width: 16px;
+  text-align: center;
 }
 
 .pie-inferior {
-    border-top: 1px solid var(--border);
-    text-align: center;
-    padding: 18px 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 16px 24px;
 }
 
 .pie-inferior p {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.pie-inferior strong {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 992px) {
-    .seccion-estudiantes {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .seccion-estudiantes {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .pie-contenido {
-        grid-template-columns: 1fr 1fr;
-    }
+  .pie-contenido {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    .encabezado-texto h1 {
-        font-size: 1.4rem;
-    }
+  .encabezado-texto h1 {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 600px) {
-    .seccion-estudiantes {
-        grid-template-columns: 1fr;
-    }
+  .seccion-estudiantes {
+    grid-template-columns: 1fr;
+  }
 
-    .pie-contenido {
-        grid-template-columns: 1fr;
-    }
+  .pie-contenido {
+    grid-template-columns: 1fr;
+  }
 
-    .contenido-principal {
-        padding: 20px 16px 40px;
-    }
+  .contenido-principal {
+    padding: 16px 12px 40px;
+  }
 
-    .encabezado-principal {
-        padding: 18px 16px;
-    }
+  .encabezado-principal {
+    padding: 0 12px;
+  }
 
-    .navegacion-principal {
-        padding: 0 16px;
-    }
+  .encabezado-contenido {
+    flex-wrap: wrap;
+    min-height: auto;
+    padding: 10px 0;
+  }
 
-    .menu-enlaces {
-        flex-wrap: wrap;
-    }
+  .encabezado-texto h1 {
+    font-size: 0.88rem;
+    margin-left: 0;
+  }
 
-    .menu-enlaces li a {
-        padding: 10px 14px;
-        font-size: 0.82rem;
-    }
+  .navegacion-principal {
+    padding: 0 12px;
+    overflow-x: auto;
+  }
 
-    .encabezado-texto h1 {
-        font-size: 1.2rem;
-    }
+  .menu-enlaces {
+    flex-wrap: nowrap;
+  }
+
+  .menu-enlaces li a {
+    padding: 10px 12px;
+    font-size: 0.78rem;
+  }
+
+  .logo-universidad {
+    height: 34px;
+  }
 }
